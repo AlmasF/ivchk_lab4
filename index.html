@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdugali Events</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/smile.png" type="image/png">
+</head>
+
+<script src="script.js"></script>
+
+<body onload="onload_func()">
+    <h1>Примеры использования Event Handlers</h1>
+    <h2>Сделал: Абдугалиев Алмас</h2>
+    <h3>Лабораторная по ИВЧК 4</h3>
+
+    <p>Эта страница посвящена демонстрации javascript событий<br></p>
+
+
+    <form action="cgi-bin/server.pl" id="myForm" method="post">
+        <p>
+            <b>1) OnChange Event</b><br>После ввода текста все буквы автоматически станут заглавными<br><br>
+            Введите имя: <input type="text" id="fname" onchange="onChange_func()">
+        </p>
+        <input type="button" onclick="submit_func()" value="Отправить">
+    </form>
+
+    <hr>
+    <b>2) OnClick Event</b> <br> После нажатия будет выпущено оповещение <br><br>
+    <input type="button" onclick="onClick_func()" value="Оповещение">
+    <p id="once"></p>
+
+    <hr>
+
+    <p>
+        <b>3) OnMouseover and OnMouseout Event</b> <br>
+        Pазмер картинки меняется при наведении и отводе курсора 
+        <br><br>
+        <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" 
+        src="img/smile.png" alt="Smiley" width="64" height="64">
+    </p>
+
+    <hr>
+
+    <p>
+        <b>4) OnKeydown and OnKeyup Event</b> <br>
+        Задний фон текстового поля меняетя при наборе и остановке набора <br><br>
+        <input type="text" id="keyd" onkeydown="onKeydown_func()" onkeyup="onKeyup_func()">
+    </p>
+
+    <hr>
+
+    <p>
+        <b>5) Onload Event</b><br><br>
+        Продемонстрирован при загрузке страницы.
+    </p>
+
+</body>
+</html>
