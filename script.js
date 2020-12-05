@@ -32,3 +32,16 @@ function onload_func() {
 function submit_func() {
     document.getElementById("myForm").submit();
 }
+
+function onBlur_func() {
+    var x = document.getElementById("bname");
+    x.value = x.value.toUpperCase();
+}
+
+function onSelect_func() {
+    alert("Выбран какой-то текст!");
+}
+
+function onFocus_func(x) {
+    x.style.background = "yellow";
+}
