@@ -18,7 +18,7 @@
     <p>Эта страница посвящена демонстрации javascript событий<br></p>
 
 
-    <form action="server.pl" id="myForm" method="post">
+    <form action="cgi-bin/server.pl" id="myForm" method="post">
         <p>
             <b>1) OnChange Event</b><br>После ввода текста все буквы автоматически станут заглавными<br><br>
             Введите имя: <input type="text" id="fname" onchange="onChange_func()">
@@ -54,6 +54,36 @@
     <p>
         <b>5) Onload Event</b><br><br>
         Продемонстрирован при загрузке страницы.
+    </p>
+
+    <hr>
+
+    <p>
+        <b>6) OnFocus Event</b>
+        Если нажать на поле, оно поменяет фон
+        <br>
+        <br>
+        Введите имя: <input type="text" onfocus="onFocus_func(this)">
+    </p>
+
+    <hr>
+
+    <p>
+        <b>7) OnSelect Event</b><br>
+        Попробуй выделить текст и тогда будет сообщение
+        <br>
+        <br>
+        Выдели текст внутри: <input type="text" value="Hello world!" onselect="onSelect_func()">
+    </p>
+
+    <hr>
+
+    <p>
+        <b>8) OnBlur Event</b><br>
+        Убрать наводку и буквы станут заглавными
+        <br>
+        <br>
+        Введите имя: <input type="text" id="bname" onblur="onBlur_func()">
     </p>
 
 </body>
